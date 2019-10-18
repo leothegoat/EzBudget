@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.ChooseTransaction">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Navy">
+            <Image
+        Scale="1"
+        VerticalOptions="Start" 
+        Source="golddollar.png"
+        />
+         
+            
+            <Label Text="Choose Type: "
+                FontSize="40.0"
+                FontAttributes="Bold"
+                TextColor="White"
+                TextDecorations="Underline"
+                HorizontalOptions="Center"
+                   />
+            
+            <Label/>
+            <Label/>
+
+            <Button 
+                Text="Expenditure"
+                FontSize="Large"
+                TextColor="White"
+                BackgroundColor="Navy"
+                Clicked="AddExpenditure_Clicked"
+                />
+            
+          
+            <Label/>
+            <Label/>
+            
+            <Button
+                Text="Deposit"
+                FontSize="Large"
+                TextColor="White"
+                BackgroundColor="Navy"
+                Clicked="AddDeposit_Clicked"
+                />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

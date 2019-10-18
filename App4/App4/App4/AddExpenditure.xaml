@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.AddExpenditure">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="Navy" Padding="10">
+
+            <Label
+                HorizontalOptions="Center"
+                TextColor="White"
+                FontAttributes="Bold"
+                Text="Enter Amount"
+                FontSize="30"
+                />
+
+            <Entry x:Name="EnteredExpense"
+            Placeholder="           $0"
+            PlaceholderColor="White"
+            FontAttributes="Bold"
+            BackgroundColor="Navy"
+            VerticalOptions="Start"
+            HorizontalOptions="CenterAndExpand"
+            FontSize="40"
+            TextColor="White"
+            WidthRequest="300"
+            Keyboard="Numeric"
+            />
+
+            <Picker x:Name="CategoryPicker" Title="            Select Category" BackgroundColor="Navy" TitleColor="White" FontSize="30">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Food</x:String>
+                        <x:String>Entertainment</x:String>
+                        <x:String>Transportation</x:String>
+                        <x:String>Bills</x:String>
+                        <x:String>Other</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry
+                x:Name="EnteredDescription"
+            Placeholder="    Other Infomarion"
+            PlaceholderColor="White"
+            FontSize="30"
+            BackgroundColor="Navy"
+            VerticalOptions="Start"
+            HorizontalOptions="CenterAndExpand"
+            TextColor="White"
+            WidthRequest="300"
+             
+            />
+
+            <Button
+            Text="Add Expense"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            BackgroundColor="Navy"
+            TextColor="White"
+            FontSize="30"
+            Clicked="AddExpense_Clicked"
+             
+            />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
